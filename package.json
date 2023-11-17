@@ -1,0 +1,58 @@
+{
+  "name": "@malga/card-validator",
+  "version": "1.0.0",
+  "description": "A simple card validator",
+  "author": "Malga <engineer@malga.io>",
+  "contributors": [
+    "Diego Saouda <diego.saouda@malga.io>",
+    "Eny Martins <eny@malga.io>",
+    "Leonardo Pinheiro <leonardo@malga.io>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/plughacker/card-validator/issues"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "git@github.com:plughacker/card-validator.git",
+  "homepage": "https://github.com/plughacker/card-validator#readme",
+  "scripts": {
+    "rimraf": "./node_modules/rimraf/bin.js",
+    "clean": "rimraf dist/",
+    "build": "yarn clean && tsc",
+    "test": "jest",
+    "lint": "eslint \"src/**/*.ts\" --fix"
+  },
+  "dependencies": {
+    "card-validator": "^8.1.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.2",
+    "@types/node": "^20.3.1",
+    "@typescript-eslint/eslint-plugin": "^5.60.0",
+    "@typescript-eslint/parser": "^5.60.0",
+    "eslint": "^8.43.0",
+    "jest": "^29.5.0",
+    "rimraf": "^5.0.1",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "5.0.4"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  }
+}
