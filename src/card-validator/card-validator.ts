@@ -1,8 +1,6 @@
 import * as valid from 'card-validator'
 
-const cardValidator = valid
-
-cardValidator.creditCardType.addCard({
+valid.creditCardType.addCard({
   niceType: 'VR',
   type: 'vr',
   patterns: [627416, 637036],
@@ -15,7 +13,7 @@ cardValidator.creditCardType.addCard({
 })
 
 //@see: https://www.sodexobeneficios.com.br/estabelecimentos/treinamentos/como-aceitar-sodexo-na-sua-maquininha-ou-tef/configuracao-de-maquinas-tef.htm
-cardValidator.creditCardType.addCard({
+valid.creditCardType.addCard({
   niceType: 'Sodexo',
   type: 'sodexo',
   patterns: [606071, 603389, 606070, 606069, 606068, 600818],
@@ -27,4 +25,4 @@ cardValidator.creditCardType.addCard({
   },
 })
 
-export default cardValidator
+export = valid
