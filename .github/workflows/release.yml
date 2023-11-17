@@ -12,6 +12,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+          cache: yarn
       - run: yarn install --frozen-lockfile
 
   test:
@@ -22,6 +23,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+          cache: yarn
       - run: yarn install --frozen-lockfile
       - run: yarn test
 
@@ -37,8 +39,9 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org
+          cache: yarn
       - run: yarn install --frozen-lockfile
       - run: yarn build
-      - run: yarn publish
+      - run: yarn publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
