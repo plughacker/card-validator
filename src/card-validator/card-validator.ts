@@ -25,4 +25,4 @@ valid.creditCardType.addCard({
   },
 })
 
-export = valid
+export default valid

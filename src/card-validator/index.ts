@@ -1,3 +1,3 @@
-import * as cardValidator from './card-validator'
+import cardValidator from './card-validator'
 
-export = cardValidator
+export default cardValidator
