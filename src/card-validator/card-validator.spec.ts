@@ -2891,6 +2891,62 @@ const cards = [
     cardNumber: '6008181902829594',
     issuer: 'Sodexo',
   },
+
+  // Hiper / Hipercard
+  {
+    cardNumber: '6376123138041929',
+    issuer: 'Hiper',
+  },
+  {
+    cardNumber: '3841601776658637',
+    issuer: 'Hipercard',
+  },
+  {
+    cardNumber: '6376091128440536',
+    issuer: 'Hiper',
+  },
+
+  {
+    cardNumber: '3841608696344628',
+    issuer: 'Hipercard',
+  },
+  {
+    cardNumber: '3841007784180749',
+    issuer: 'Hipercard',
+  },
+  {
+    cardNumber: '6376095913493287',
+    issuer: 'Hiper',
+  },
+  {
+    cardNumber: '6375999171017277',
+    issuer: 'Hiper',
+  },
+  {
+    cardNumber: '6376091128440536',
+    issuer: 'Hiper',
+  },
+  {
+    cardNumber: '6370952217640136',
+    issuer: 'Hiper',
+  },
+  {
+    cardNumber: '6062821089080742',
+    issuer: 'Hipercard',
+  },
+  {
+    cardNumber: '6376091366922500',
+    issuer: 'Hiper',
+  },
+  {
+    cardNumber: '6376125707893820',
+    issuer: 'Hiper',
+  },
+  {
+    cardNumber: '6376125509558696',
+    issuer: 'Hiper',
+  },
+
 ]
 
 describe('card-validator', () => {
