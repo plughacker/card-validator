@@ -26,6 +26,19 @@ valid.creditCardType.addCard({
   },
 })
 
+// https://docs.adyen.com/development-resources/testing/test-other-payment-methods/#brazil-vouchers
+valid.creditCardType.addCard({
+  niceType: 'Ticket',
+  type: 'ticket',
+  patterns: [603342],
+  gaps: [],
+  lengths: [16],
+  code: {
+    name: 'CVV',
+    size: 3,
+  },
+})
+
 //@see: https://www.sodexobeneficios.com.br/estabelecimentos/treinamentos/como-aceitar-sodexo-na-sua-maquininha-ou-tef/configuracao-de-maquinas-tef.htm
 valid.creditCardType.addCard({
   niceType: 'Sodexo',
