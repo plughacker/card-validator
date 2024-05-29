@@ -1,6 +1,6 @@
 {
   "name": "@malga/card-validator",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A simple card validator",
   "author": "Malga <engineer@malga.io>",
   "contributors": [
