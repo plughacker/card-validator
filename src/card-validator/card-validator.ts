@@ -1,15 +1,13 @@
 import * as valid from 'card-validator'
 
-
-
 valid.creditCardType.addCard({
   niceType: 'VR',
   type: 'vr',
   patterns: [
-    // VR Refeição:
+    // VR Refeição
     627416, 637202, 637200, 639834,
 
-    // VR Benefícios:
+    // VR Benefícios
     637036, 637201, 637200, 639833,
 
     // VR Auto
@@ -26,7 +24,7 @@ valid.creditCardType.addCard({
   },
 })
 
-// https://docs.adyen.com/development-resources/testing/test-other-payment-methods/#brazil-vouchers
+//@see: https://docs.adyen.com/development-resources/testing/test-other-payment-methods/#brazil-vouchers
 valid.creditCardType.addCard({
   niceType: 'Ticket',
   type: 'ticket',
