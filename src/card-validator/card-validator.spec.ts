@@ -2946,7 +2946,10 @@ const cards = [
     cardNumber: '6376125509558696',
     issuer: 'Hiper',
   },
-
+  {
+    cardNumber: '6033422553845003',
+    issuer: 'Ticket',
+  }
 ]
 
 describe('card-validator', () => {

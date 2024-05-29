@@ -3,7 +3,32 @@ import * as valid from 'card-validator'
 valid.creditCardType.addCard({
   niceType: 'VR',
   type: 'vr',
-  patterns: [627416, 637036],
+  patterns: [
+    // VR Refeição
+    627416, 637202, 637200, 639834,
+
+    // VR Benefícios
+    637036, 637201, 637200, 639833,
+
+    // VR Auto
+    637037, 637200,
+
+    // VR Cultura
+    636350, 637200
+  ],
+  gaps: [],
+  lengths: [16],
+  code: {
+    name: 'CVV',
+    size: 3,
+  },
+})
+
+//@see: https://docs.adyen.com/development-resources/testing/test-other-payment-methods/#brazil-vouchers
+valid.creditCardType.addCard({
+  niceType: 'Ticket',
+  type: 'ticket',
+  patterns: [603342],
   gaps: [],
   lengths: [16],
   code: {
