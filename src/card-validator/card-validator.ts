@@ -1,9 +1,23 @@
 import * as valid from 'card-validator'
 
+
+
 valid.creditCardType.addCard({
   niceType: 'VR',
   type: 'vr',
-  patterns: [627416, 637036],
+  patterns: [
+    // VR Refeição:
+    627416, 637202, 637200, 639834,
+
+    // VR Benefícios:
+    637036, 637201, 637200, 639833,
+
+    // VR Auto
+    637037, 637200,
+
+    // VR Cultura
+    636350, 637200
+  ],
   gaps: [],
   lengths: [16],
   code: {
