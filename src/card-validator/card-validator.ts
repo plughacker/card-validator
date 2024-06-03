@@ -28,7 +28,14 @@ valid.creditCardType.addCard({
 valid.creditCardType.addCard({
   niceType: 'Ticket',
   type: 'ticket',
-  patterns: [603342],
+  patterns: [
+
+    // Ticket VR
+    603342,
+
+    // Ticket VA
+    602651
+  ],
   gaps: [],
   lengths: [16],
   code: {
