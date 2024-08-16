@@ -32,6 +32,7 @@ valid.creditCardType.addCard({
 
     // Ticket VR
     603342,
+    603340,
 
     // Ticket VA
     602651
