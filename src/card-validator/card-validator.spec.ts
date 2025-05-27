@@ -2975,9 +2975,9 @@ describe('card-validator', () => {
     cards.forEach((card) => {
       const result = valid.number(card.cardNumber)
 
-      if (!result.card?.type) return
+      expect(result.card).toBeDefined()
 
-      const mask = maskCardNumber(result.card?.type)
+      const mask = maskCardNumber(result.card?.type, '%')
 
       const spaceIndexes = result.card?.gaps.map((gap, i) => gap + i) ?? []
 
@@ -2985,11 +2985,9 @@ describe('card-validator', () => {
         if (spaceIndexes.includes(i)) {
           expect(char).toBe(' ')
         } else {
-          expect(char).toBe('0')
+          expect(char).toBe('%')
         }
       })
-
-
     })
   })
 })

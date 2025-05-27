@@ -72,7 +72,10 @@ valid.creditCardType.addCard({
   },
 })
 
-function maskCardNumber(type: string) {
+function maskCardNumber(type?: string, maskDigit = '0') {
+  if (!type) throw new Error('Invalid card type')
+
+
   const infos = valid.creditCardType.getTypeInfo(type)
 
   const biggestCardNumber = Math.max(...infos.lengths)
@@ -82,7 +85,7 @@ function maskCardNumber(type: string) {
     if (infos.gaps.includes(i)) {
       mask += ' '
     }
-    mask += '0'
+    mask += maskDigit
   }
 
   return mask
