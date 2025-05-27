@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 
-import valid from './card-validator'
+import { valid, maskCardNumber } from './card-validator'
 
 const cards = [
   {
@@ -2968,6 +2968,28 @@ describe('card-validator', () => {
       expect(result.isValid).toBeTruthy()
       expect(result.isPotentiallyValid).toBeTruthy()
       expect(result.card?.niceType).toBe(card.issuer)
+    })
+  })
+
+  it('should be a correctly mask for a card number', () => {
+    cards.forEach((card) => {
+      const result = valid.number(card.cardNumber)
+
+      if (!result.card?.type) return
+
+      const mask = maskCardNumber(result.card?.type)
+
+      const spaceIndexes = result.card?.gaps.map((gap, i) => gap + i) ?? []
+
+      mask.split('').forEach((char, i) => {
+        if (spaceIndexes.includes(i)) {
+          expect(char).toBe(' ')
+        } else {
+          expect(char).toBe('0')
+        }
+      })
+
+
     })
   })
 })
