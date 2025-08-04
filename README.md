@@ -47,7 +47,7 @@ valid.number('6274160007029307')
 ```ts
 import { maskCardNumber } from '@malga/card-validator'
 
-maskCardNumber('visa')
+maskCardNumber('0000000000000000')
 // 0000 0000 0000 0000
 ```
 
