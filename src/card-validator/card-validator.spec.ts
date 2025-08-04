@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 
-import { valid, maskCardNumber } from './card-validator'
+import { valid, maskCardNumber } from './index'
 
 const cards = [
   {
