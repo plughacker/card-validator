@@ -1,3 +1,3 @@
-import cardValidator from './card-validator'
+import { valid, maskCardNumber } from './card-validator'
 
-export default cardValidator
+export { valid, maskCardNumber }

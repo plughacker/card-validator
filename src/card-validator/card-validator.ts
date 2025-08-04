@@ -1,7 +1,5 @@
 import * as valid from 'card-validator'
 
-
-
 valid.creditCardType.addCard({
   niceType: 'VR',
   type: 'vr',
@@ -16,7 +14,7 @@ valid.creditCardType.addCard({
     637037, 637200,
 
     // VR Cultura
-    636350, 637200
+    636350, 637200,
   ],
   gaps: [4, 8, 12],
   lengths: [16],
@@ -31,13 +29,11 @@ valid.creditCardType.addCard({
   niceType: 'Ticket',
   type: 'ticket',
   patterns: [
-
     // Ticket VR
-    603342,
-    603340,
+    603342, 603340,
 
     // Ticket VA
-    602651
+    602651,
   ],
   gaps: [4, 8, 12],
   lengths: [16],
@@ -75,7 +71,6 @@ valid.creditCardType.addCard({
 function maskCardNumber(type?: string, maskDigit = '0') {
   if (!type) throw new Error('Invalid card type')
 
-
   const infos = valid.creditCardType.getTypeInfo(type)
 
   const biggestCardNumber = Math.max(...infos.lengths)
@@ -90,7 +85,5 @@ function maskCardNumber(type?: string, maskDigit = '0') {
 
   return mask
 }
-
-
 
 export { valid, maskCardNumber }

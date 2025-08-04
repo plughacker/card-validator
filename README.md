@@ -15,14 +15,16 @@ A simple card validator based on the Braintree validator
 yarn add @malga/card-validator
 # or
 npm install @malga/card-validator
+# or
+pnpm add @malga/card-validator
 ```
 
 2. Now just validate your cards
 
 ```ts
-import cardValidator from '@malga/card-validator'
+import { valid } from '@malga/card-validator'
 
-cardValidator.number('6274160007029307')
+valid.number('6274160007029307')
 /*
 {
   card: {
@@ -38,6 +40,15 @@ cardValidator.number('6274160007029307')
   isValid: true
 }
 */
+```
+
+3. Mask a card number
+
+```ts
+import { maskCardNumber } from '@malga/card-validator'
+
+maskCardNumber('0000000000000000')
+// 0000 0000 0000 0000
 ```
 
 ## Contributing
